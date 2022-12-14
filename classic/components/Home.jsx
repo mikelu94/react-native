@@ -1,9 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 
 export default Home = () => {
+  const { colors } = useTheme();
+
   return (
     <View style={styles.layout}>
-      <Text style={styles.text}>Home.</Text>
+      <Text style={{...styles.text, color: colors.text}}>Home.</Text>
     </View>
   );
 };
